@@ -183,3 +183,32 @@ body{
         opacity: 0;
     }
 }
+
+/* Media Query: Large Smartphone */
+@media screen and (max-width: 600px) {
+    body{
+    }
+    #asteroids-belt {
+        visibility: hidden;
+    }
+    #asteroids-belt2 {
+        visibility: hidden;
+    }
+    #space {
+        margin-top: 10%;
+        margin-bottom: 50px;
+        display: flexbox;
+        justify-content: center;
+        align-content:center;
+    }
+    #blink-text {
+        opacity: 1;
+        font-size: 1rem;
+        font-weight: bold;
+        position: fixed;
+        text-align: left;
+        top: 62.5%;
+        left: 6%;
+        animation: blinker 5s linear infinite;
+        
+}
