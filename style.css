@@ -187,6 +187,7 @@ body{
 /* Media Query: Large Smartphone */
 @media screen and (max-width: 600px) {
     body{
+        overflow: hidden;
     }
     #asteroids-belt {
         visibility: hidden;
@@ -207,8 +208,8 @@ body{
         font-weight: bold;
         position: fixed;
         text-align: left;
-        top: 62.5%;
+        top: 62.2%;
         left: 6%;
         animation: blinker 5s linear infinite;
-        
+    }    
 }
