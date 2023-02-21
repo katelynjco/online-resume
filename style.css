@@ -57,7 +57,7 @@ body{
     background-color: #B554AB;
     border-radius: 24px;
     position: absolute;
-    background-image: url(../img/pinkPlanet.png);
+    background-image: url(img/pinkPlanet.png);
     background-position: center;
     background-size: contain;
     top: 9.5%;
@@ -82,7 +82,7 @@ body{
     background-color: #B227F3;
     border-radius: 24px;
     position: absolute;
-    background-image: url(../img/purplePlanet.png);
+    background-image: url(img/purplePlanet.png);
     background-position: center;
     background-size: contain;
     top: 9.5%;
@@ -107,7 +107,7 @@ body{
     background-color: #00C2FF;
     border-radius: 24px;
     position: absolute;
-    background-image: url(../img/bluePlanet.png);
+    background-image: url(img/bluePlanet.png);
     background-position: center;
     background-size: contain;
     top: 9.5%;
@@ -141,7 +141,7 @@ body{
 	background-color: transparent;
 	background-size: 100%;
 	background-repeat: no-repeat;
-	background-image: url(https://github.com/katelynjco/portfolio/img/sun.png);
+	background-image: url(img/sun.png);
 	transform-origin: center center;
 }
 
