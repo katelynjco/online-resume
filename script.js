@@ -1,11 +1,11 @@
 // Asteroid Belt/ Sra Randomizer
-function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min
-}
+    // function randomNumber(min, max) {
+    //     return Math.floor(Math.random() * (max - min + 1)) + min
+    // }
 
-const STAR_COUNT = 100
-let result = ""
-for(let i = 0; i < STAR_COUNT; i++){
-    result += `${randomNumber(-25, 25)}vw ${randomNumber(-50, 50)}vh ${randomNumber(0, 3)}px ${randomNumber(0,3)}px #59373F,`
-}
-console.log(result.substring(0, result.length - 1))
+    // const STAR_COUNT = 100
+    // let result = ""
+    // for(let i = 0; i < STAR_COUNT; i++){
+    //     result += `${randomNumber(-25, 25)}vw ${randomNumber(-50, 50)}vh ${randomNumber(0, 3)}px ${randomNumber(0,3)}px #59373F,`
+    // }
+    // console.log(result.substring(0, result.length - 1))

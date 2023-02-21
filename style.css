@@ -144,6 +144,19 @@ body{
 	background-image: url(img/sun.png);
 	transform-origin: center center;
 }
+#blink-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #798C9E;
+    opacity: 0.7;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: fixed;
+    bottom: 2%;
+    width: 100%;
+    text-align: center;
+    animation: blinker 5s linear infinite;
+}
 
 /* ---------- Animation ---------- */
 @keyframes spin-right {
@@ -162,5 +175,10 @@ body{
       -ms-transform: rotate(-360deg);
       -o-transform: rotate(-360deg);
       transform: rotate(-360deg);
+    }
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
     }
 }
