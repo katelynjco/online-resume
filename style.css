@@ -4,6 +4,7 @@ body{
 	background-color: #060214;
     overflow: hidden;
 }
+/* Solar System Design */
 #stars{
     position: fixed;
     top: 50%;
@@ -132,7 +133,6 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);;
 }
-
 #sun-container{
     width: 10rem;
 	height: 10rem;
@@ -144,6 +144,7 @@ body{
 	background-image: url(img/sun.png);
 	transform-origin: center center;
 }
+/* Text */
 #blink-text {
     font-family: 'Source Sans Pro', sans-serif;
     font-family: 'Space Grotesk', sans-serif;
