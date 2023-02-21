@@ -146,7 +146,7 @@ body{
 }
 
 /* ---------- Animation ---------- */
-@-webkit-keyframes spin-right {
+@keyframes spin-right {
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -155,7 +155,7 @@ body{
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes spin-left {
+@keyframes spin-left {
     100% {
       -webkit-transform: rotate(-360deg);
       -moz-transform: rotate(-360deg);
