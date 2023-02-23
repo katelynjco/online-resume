@@ -49,5 +49,6 @@ function closeMenu() {
     container.addEventListener('click', openMenu);
     exitButton.addEventListener('click', closeMenu);
   };
-  
+
+// On Load
 document.addEventListener('DOMContentLoaded', init, false);
