@@ -26,6 +26,7 @@ function closeMenu() {
     }
   }
   
+  // Open Menu Upon Button Click
   function openMenu() {
     const menuContainer = document.getElementById("menu-container");
     if (!(menuContainer && menuContainer.style.visibility === "visible")) {
@@ -41,23 +42,11 @@ function closeMenu() {
     }
   }
   
-  
-  // Open Menu Upon Screen Click
-  function checkMenu() {
-    // Make Menu Visible
-    try {
-      if (!(document.getElementById("menu-container").style.visibility === "visible")) {
-        openMenu();
-      }
-    } catch (error) {
-      // Catch Error Here
-    }
-  }
-
+// Add Event Listeners After DOM Loads
   function init(){
     const exitButton = document.getElementById("exit-button");
     const container = document.getElementById("container");
-    container.addEventListener('click', checkMenu);
+    container.addEventListener('click', openMenu);
     exitButton.addEventListener('click', closeMenu);
   };
   
