@@ -4,7 +4,15 @@ body{
 	background-color: #060214;
     overflow: hidden;
 }
-/* Solar System Design */
+/* Solar System BackGround */
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    visibility: visible;
+}
 #stars{
     position: fixed;
     top: 50%;
@@ -52,30 +60,30 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#pinkPlanet {
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #B554AB;
+#bluePlanet-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 27rem;
+    height: 27rem;
+    margin-top: -13.5rem;
+    margin-left: -13.5rem;
+    border: 2px #3f396b62 dashed;
+    border-radius: 100%;
+    -webkit-animation: spin-right 20s linear infinite;
+    animation: spin-right 20s linear infinite;
+}
+#bluePlanet {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #00C2FF;
     border-radius: 24px;
     position: absolute;
-    background-image: url(img/pinkPlanet.png);
+    background-image: url(img/bluePlanet.png);
     background-position: center;
     background-size: contain;
     top: 9.5%;
     left: 9.5%;
-}
-#pinkPlanet-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 15rem;
-    height: 15rem;
-    margin-top: -7.5rem;
-    margin-left: -7.5rem;
-    border: 2px #3f396b62 dashed;
-    border-radius: 100%;
-    -webkit-animation: spin-right 10s linear infinite;
-    animation: spin-right 10s linear infinite;
 }
 #purplePlanet {
     width: 2rem;
@@ -102,30 +110,30 @@ body{
     -webkit-animation: spin-right 15s linear infinite;
     animation: spin-right 15s linear infinite;
 }
-#bluePlanet {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: #00C2FF;
+#pinkPlanet {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #B554AB;
     border-radius: 24px;
     position: absolute;
-    background-image: url(img/bluePlanet.png);
+    background-image: url(img/pinkPlanet.png);
     background-position: center;
     background-size: contain;
     top: 9.5%;
     left: 9.5%;
 }
-#bluePlanet-container {
+#pinkPlanet-container {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 27rem;
-    height: 27rem;
-    margin-top: -13.5rem;
-    margin-left: -13.5rem;
+    width: 15rem;
+    height: 15rem;
+    margin-top: -7.5rem;
+    margin-left: -7.5rem;
     border: 2px #3f396b62 dashed;
     border-radius: 100%;
-    -webkit-animation: spin-right 20s linear infinite;
-    animation: spin-right 20s linear infinite;
+    -webkit-animation: spin-right 10s linear infinite;
+    animation: spin-right 10s linear infinite;
 }
 #sun{
 	position: absolute;
@@ -144,9 +152,55 @@ body{
 	background-image: url(img/sun.png);
 	transform-origin: center center;
 }
+/* Menu Design */
+#menu-container {
+    position: absolute;
+    width: 60%;
+    height: 90%;
+    right: 1%;
+    top: 5%;
+    margin: 10px 10px 10px 10px;
+    background: #000000;
+    opacity: 0.9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    visibility: hidden;
+}
+#menu {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    right: 4%;
+    top: 13%;
+    margin: 10px 10px 10px 10px;
+    border-radius: 20px;
+    background-color: #01020d;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%233400a1' fill-opacity='0.27'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+#menu-button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 24px;
+    position: absolute;
+    background-size: contain;
+    top: 5%;
+    left: 5%;
+    background-color: #3400A1;
+    background-image: url(img/menu.png);
+}
+#exit-button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 24px;
+    position: absolute;
+    background-size: contain;
+    top: 5%;
+    left: 91%;
+    background-color: #3400A1;
+    background-image: url(img/exit.png);
+}
 /* Text Design */
 #blink-text {
-    font-family: 'Source Sans Pro', sans-serif;
     font-family: 'Space Grotesk', sans-serif;
     color: #4f406b67;
     opacity: 1;
@@ -158,6 +212,7 @@ body{
     text-align: center;
     animation: blinker 5s linear infinite;
 }
+
 
 /* ---------- Animation ---------- */
 @keyframes spin-right {
@@ -185,31 +240,44 @@ body{
 }
 
 /* Media Query: Large Smartphone */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     body{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10;
         overflow: hidden;
     }
-    #asteroids-belt {
-        visibility: hidden;
-    }
-    #asteroids-belt2 {
+    #asteroids-belt-container {
         visibility: hidden;
     }
     #space {
-        margin-top: 10%;
-        margin-bottom: 50px;
+        margin-top: auto;
+        margin-bottom: auto;
         display: flexbox;
         justify-content: center;
         align-content:center;
     }
     #blink-text {
-        opacity: 1;
-        font-size: 1rem;
-        font-weight: bold;
-        position: fixed;
-        text-align: left;
-        top: 62.2%;
-        left: 6%;
-        animation: blinker 5s linear infinite;
-    }    
+        visibility: hidden;
+    }
+    #menu-container{
+        width: 80%;
+        height: 80%;
+        right: 10px;
+        top: 50px;
+        margin: 10px 10px 10px 10px;
+    }   
+    #menu{
+        width: 80%;
+        height: 80%;
+        right: 5%;
+        top: 80px;
+        margin: 10px 10px 10px 10px;
+    }
+    #exit-button {
+        left: 85%;
+    }
 }
