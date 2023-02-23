@@ -44,8 +44,8 @@ body{
     width: 0.01px;
     background-color: #382B2F;
     border-radius:50%;
-    -webkit-animation: spin-right 100s linear infinite;
-    animation: spin-right 100s linear infinite;
+    -webkit-animation: spin-right 180s linear infinite;
+    animation: spin-right 180s linear infinite;
     z-index: 3;
 }
 #asteroids-belt {
@@ -56,8 +56,8 @@ body{
     width: 0.01px;
     background-color: #301B2F;
     border-radius:50%;
-    -webkit-animation: spin-right 180s linear infinite;
-    animation: spin-right 180s linear infinite;
+    -webkit-animation: spin-right 100s linear infinite;
+    animation: spin-right 100s linear infinite;
     z-index: 2;
 }
 #solarSystem {
