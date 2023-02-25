@@ -11,44 +11,41 @@
 </head>
 <body>
     <!-- Background -->
-        <div class="space-container" id="space-conatiner">
-            <div id="stars-container">
-                <div id="stars"></div>
+    <div class="click-container" id="container"></div>
+    <div class="space" id="space">
+        <div id="stars"></div>
+        <div id="asteroids-belt-container">
+            <div id="asteroids-belt" title="asteroids-belt"></div>
+            <div id="asteroids-belt2" title="asteroids-belt2"></div>
+        </div>
+        <div class="solarSystem" id="solarSystem">
+            <div id="sun">
+                <div id="sun-container"></div>
             </div>
-            <div class="space" id="space">
-                <div id="asteroids-belt-container">
-                    <div id="asteroids-belt" title="asteroids-belt"></div>
-                    <div id="asteroids-belt2" title="asteroids-belt2"></div>
-                </div>
-                <div class="solarSystem" id="solarSystem">
-                    <div id="sun">
-                        <div id="sun-container"></div>
-                    </div>
-                    <div id="pinkPlanet-container">
-                        <div id="pinkPlanet" title="Click Me!"></div>
-                    </div>
-                    <div id="purplePlanet-container">
-                        <div id="purplePlanet" title="Click Me!"></div>
-                    </div>
-                    <div id="bluePlanet-container">
-                        <div id="bluePlanet" title="Click Me!"></div>
-                    </div>
-                </div>
-                <div class="blink-text" id="blink-text">
-                    <h1>-Click Anywhere-</h1>
-                </div>
+            <div id="pinkPlanet-container">
+                <div id="pinkPlanet" title="Click Me!"></div>
+            </div>
+            <div id="purplePlanet-container">
+                <div id="purplePlanet" title="Click Me!"></div>
+            </div>
+            <div id="bluePlanet-container">
+                <div id="bluePlanet" title="Click Me!"></div>
             </div>
         </div>
-        <div class="container" id="container"></div>
+        <div class="blink-text" id="blink-text">
+            <h1>-Click Anywhere-</h1>
+        </div>
+    </div>
     <!-- Menus -->
         <div class="menu-container" id="menu-container">
-            <div class="menu" id="menu"></div>
-            <div class="button-container" id="button-container">
-                <div class="exit-button" id="exit-button" title="exit" alt="exit"></div>
-                <div class="menu-button" id="menu-button"></div>
-            </div>
-            <div class="pages-container" id="pages-container">
-
+            <div class="menu" id="menu">
+                <div class="button-container" id="button-container">
+                    <div class="exit-button" id="exit-button" title="exit" alt="exit"></div>
+                    <div class="menu-button" id="menu-button"></div>
+                </div>
+                <embed type="text/html" src="embeded/about.html" class="about" id="about">
+                <embed type="text/html" src="embeded/info.html" class="info" id="info">
+                <embed type="text/html" src="embeded/work.html" class="work" id="work">
             </div>
         </div>
     </div>

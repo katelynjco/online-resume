@@ -1,4 +1,20 @@
-  
+const menuContainer = document.getElementById("menu-container");
+const solarSystem = document.getElementById("solarSystem");
+const container = document.getElementById("container");
+const blinkText = document.getElementById("blink-text");
+const exitButton = document.getElementById("exit-button");
+const bluePlanet = document.getElementById("bluePlanet");
+const bluePlanetContainer = document.getElementById("bluePlanet-container");
+const purplePlanet = document.getElementById("purplePlanet");
+const purplePlanetContainer = document.getElementById("purplePlanet-container");
+const pinkPlanet = document.getElementById("pinkPlanet");
+const pinkPlanetContainer = document.getElementById("pinkPlanet-container");
+const sun = document.getElementById("sun");
+const sunContainer = document.getElementById("sun-container");
+const embedAbout = document.getElementById("about");
+const embedInfo = document.getElementById("info");
+const embedWork = document.getElementById("work");
+
 // Generate Background Asteroid Belt and Stars
 function generateBackground(){
   // Star Randomizer
@@ -63,46 +79,143 @@ function generateBackground(){
   generateAsteroids2();
 }
 
+// Hide Embeded HTMLs
+function hideEmbed() {
+    try {
+      embedAbout.style.visibility = "hidden";
+      embedInfo.style.visibility = "hidden";
+      embedWork.style.visibility = "hidden";
+    } catch (error) {
+      // Catch Error Here
+    }
+}
 
-// Close Menu Upon Button Click
+// Open About Page Upon Menu Open
+function openEmbedAbout() {
+  if (!(menuContainer && menuContainer.style.visibility === "visible")) {
+    // Show Menu
+    try {
+      embedAbout.style.visibility = "visible";
+      embedInfo.style.visibility = "hidden";
+      embedWork.style.visibility = "hidden";
+    } catch (error) {
+      // Catch Error Here
+    }
+  }
+}
+
+// Open Work Page Upon Menu Open
+function openEmbedWork() {
+  if (!(menuContainer && menuContainer.style.visibility === "visible")) {
+    // Show Menu
+    try {
+      embedAbout.style.visibility = "hidden";
+      embedInfo.style.visibility = "hidden";
+      embedWork.style.visibility = "visible";
+    } catch (error) {
+      // Catch Error Here
+    }
+  }
+}
+
+// Open Info Page Upon Menu Open
+function openEmbedInfo() {
+  if (!(menuContainer && menuContainer.style.visibility === "visible")) {
+    // Show Menu
+    try {
+      embedAbout.style.visibility = "hidden";
+      embedInfo.style.visibility = "visible";
+      embedWork.style.visibility = "hidden";
+    } catch (error) {
+      // Catch Error Here
+    }
+  }
+}
+
+// Close Menu Container Upon Button Click
 function closeMenu() {
-    const menuContainer = document.getElementById("menu-container");
     if (menuContainer && menuContainer.style.visibility === "visible") {
       // Hide Menu
       try {
+        hideEmbed();
         menuContainer.style.visibility = "hidden";
-        document.getElementById("blink-text").style.visibility = "visible";
-        document.getElementById("container").style.width = "100%";
-        document.getElementById("solarSystem").style.left = "50%";
+        blinkText.style.visibility = "visible";
+        container.style.width = "100%";
+        solarSystem.style.left = "50%";
       } catch (error) {
         // Catch Error Here
       }
     }
   }
   
-  // Open Menu Upon Button Click
+  // Open Menu Container Upon Button Click
   function openMenu() {
-    const menuContainer = document.getElementById("menu-container");
     if (!(menuContainer && menuContainer.style.visibility === "visible")) {
       // Show Menu
       try {
         menuContainer.style.visibility = "visible";
-        document.getElementById("blink-text").style.visibility = "hidden";
-        document.getElementById("container").style.width = "0%";
-        document.getElementById("solarSystem").style.left = "20%";
+        blinkText.style.visibility = "hidden";
+        container.style.width = "0%";
+        solarSystem.style.left = "20%";
       } catch (error) {
         // Catch Error Here
       }
     }
   }
+
+  // Open Menu Container & Menu Page Upon Button Click
+  function openMenuPage() {
+    // Open Menu Container
+    openMenu();
+    // Open Menu
+
+  }
+
+  // Open Menu Container & About Page Upon Button Click
+  function openAbout() {
+    // Open Menu Container
+    openMenu();
+    // Open About HTML
+    openEmbedAbout();
+    console.log('about');
+  }
+
+  // Open Menu Container & Work Page Upon Button Click
+  function openWork() {
+    // Open Menu Container
+    openMenu();
+    // Open Work HTML
+    openEmbedWork();
+    console.log('work');
+  }
+
+  // Open Menu Container & Info Page Upon Button Click
+  function openInfo() {
+   // Open Menu Container
+    openMenu();
+    // Open Work HTML
+    openEmbedInfo();
+    console.log('info');
+  }
   
 // Add Event Listeners After DOM Loads
   function init(){
-    const exitButton = document.getElementById("exit-button");
-    const container = document.getElementById("container");
-    container.addEventListener('click', openMenu);
-    exitButton.addEventListener('click', closeMenu);
+    // Generate Background
     generateBackground();
+
+    // Open Menus
+    container.addEventListener('click', openMenuPage);
+    bluePlanet.addEventListener('click', openAbout);
+    bluePlanetContainer.addEventListener('click', openAbout);
+    purplePlanet.addEventListener('click', openWork);
+    purplePlanetContainer.addEventListener('click', openWork);
+    pinkPlanet.addEventListener('click', openInfo);
+    pinkPlanetContainer.addEventListener('click', openInfo);
+    sun.addEventListener('click', openMenuPage);
+    sunContainer.addEventListener('click', openMenuPage);
+
+    // Exit Menu
+    exitButton.addEventListener('click', closeMenu);
   };
 
 // On Load
