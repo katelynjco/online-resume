@@ -2,6 +2,7 @@ html {
     box-sizing: content-box;
     width: 100%;
     z-index: 0;
+    cursor: url(embeded/img/purpleCursor.png),auto;
 }
 
 body{
@@ -85,7 +86,7 @@ body{
     background-color: #9FF1FD;
     border-radius: 24px;
     position: absolute;
-    background-image: url(img/bluePlanet.png);
+    background-image: url(embeded/img/bluePlanet.png);
     background-position: center;
     background-size: contain;
     top: 9.5%;
@@ -98,7 +99,7 @@ body{
     background-color: #6D5CBF;
     border-radius: 24px;
     position: absolute;
-    background-image: url(img/purplePlanet.png);
+    background-image: url(embeded/img/purplePlanet.png);
     background-position: center;
     background-size: contain;
     top: 9.5%;
@@ -125,7 +126,7 @@ body{
     background-color: #E86EDE;
     border-radius: 24px;
     position: absolute;
-    background-image: url(img/pinkPlanet.png);
+    background-image: url(embeded/img/pinkPlanet.png);
     background-position: center;
     background-size: contain;
     top: 9.5%;
@@ -161,7 +162,7 @@ body{
 	background-color: transparent;
 	background-size: 100%;
 	background-repeat: no-repeat;
-	background-image: url(img/sun.png);
+	background-image: url(embeded/img/sun.png);
 	transform-origin: center center;
     z-index: 10;
 }
@@ -169,16 +170,20 @@ body{
 /* Planet Hover Designs */
 #bluePlanet-container:hover {
     border: 2px #B7A9FE dashed;
+    cursor: url(embeded/img/pinkCursor.png),auto;
 }
 #purplePlanet-container:hover {
     border: 2px #B7A9FE dashed;
+    cursor: url(embeded/img/pinkCursor.png),auto;
 }
 #pinkPlanet-container:hover {
     border: 2px #B7A9FE dashed;
+    cursor: url(embeded/img/pinkCursor.png),auto;
 }
 #sun-container:hover {
     border-radius: 100rem;
     box-shadow: inset 4px 4px 20px #B7A9FE;
+    cursor: url(embeded/img/pinkCursor.png),auto;
 }
 
 /* Menu Design */
@@ -226,7 +231,8 @@ body{
     border-radius: 24px;
     background-size: contain;
     background-color: #b7a9fe;
-    background-image: url(img/exit.png);
+    background-image: url(embeded/img/exit.png);
+    cursor: url(embeded/img/pinkCursor.png),auto;
     order: 2;
     z-index: 16;
 }
@@ -236,21 +242,40 @@ body{
     border-radius: 24px;
     background-size: contain;
     background-color: #b7a9fe;
-    background-image: url(img/menu.png);
+    background-image: url(embeded/img/menu.png);
+    cursor: url(embeded/img/pinkCursor.png),auto;
     z-index: 16;
 }
 /* Embeded Pages */
 #about {
-    width: 4rem;
-    height: 3rem;
+    position: absolute;
+    box-sizing: border-box;
+    width: 98%;
+    height: 97%;
+    right: 0%;
+    top: 0%;
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
 }
 #info {
-    width: 4rem;
-    height: 3rem;
+    position: absolute;
+    box-sizing: border-box;
+    width: 98%;
+    height: 97%;
+    right: 0%;
+    top: 0%;
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
 }
 #work {
-    width: 4rem;
-    height: 3rem;
+    position: absolute;
+    box-sizing: border-box;
+    width: 98%;
+    height: 97%;
+    right: 0%;
+    top: 0%;
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
 }
 /* Text Design */
 #blink-text {

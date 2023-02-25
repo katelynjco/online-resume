@@ -92,44 +92,30 @@ function hideEmbed() {
 
 // Open About Page Upon Menu Open
 function openEmbedAbout() {
-  if (!(menuContainer && menuContainer.style.visibility === "visible")) {
-    // Show Menu
     try {
       embedAbout.style.visibility = "visible";
-      embedInfo.style.visibility = "hidden";
-      embedWork.style.visibility = "hidden";
     } catch (error) {
       // Catch Error Here
     }
-  }
 }
 
 // Open Work Page Upon Menu Open
 function openEmbedWork() {
-  if (!(menuContainer && menuContainer.style.visibility === "visible")) {
-    // Show Menu
     try {
-      embedAbout.style.visibility = "hidden";
-      embedInfo.style.visibility = "hidden";
       embedWork.style.visibility = "visible";
     } catch (error) {
       // Catch Error Here
     }
-  }
 }
 
 // Open Info Page Upon Menu Open
 function openEmbedInfo() {
-  if (!(menuContainer && menuContainer.style.visibility === "visible")) {
     // Show Menu
     try {
-      embedAbout.style.visibility = "hidden";
       embedInfo.style.visibility = "visible";
-      embedWork.style.visibility = "hidden";
     } catch (error) {
       // Catch Error Here
     }
-  }
 }
 
 // Close Menu Container Upon Button Click
@@ -167,7 +153,8 @@ function closeMenu() {
   function openMenuPage() {
     // Open Menu Container
     openMenu();
-    // Open Menu
+    // Hide Embeded
+    hideEmbed();
 
   }
 
@@ -175,27 +162,30 @@ function closeMenu() {
   function openAbout() {
     // Open Menu Container
     openMenu();
+    // Hide other Embeded
+    hideEmbed();
     // Open About HTML
     openEmbedAbout();
-    console.log('about');
   }
 
   // Open Menu Container & Work Page Upon Button Click
   function openWork() {
     // Open Menu Container
     openMenu();
+    // Hide other Embeded
+    hideEmbed();
     // Open Work HTML
     openEmbedWork();
-    console.log('work');
   }
 
   // Open Menu Container & Info Page Upon Button Click
-  function openInfo() {
+  function openSite() {
    // Open Menu Container
     openMenu();
+    // Hide other Embeded
+    hideEmbed();
     // Open Work HTML
     openEmbedInfo();
-    console.log('info');
   }
   
 // Add Event Listeners After DOM Loads
@@ -209,8 +199,8 @@ function closeMenu() {
     bluePlanetContainer.addEventListener('click', openAbout);
     purplePlanet.addEventListener('click', openWork);
     purplePlanetContainer.addEventListener('click', openWork);
-    pinkPlanet.addEventListener('click', openInfo);
-    pinkPlanetContainer.addEventListener('click', openInfo);
+    pinkPlanet.addEventListener('click', openSite);
+    pinkPlanetContainer.addEventListener('click', openSite);
     sun.addEventListener('click', openMenuPage);
     sunContainer.addEventListener('click', openMenuPage);
 

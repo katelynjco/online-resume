@@ -19,17 +19,17 @@
             <div id="asteroids-belt2" title="asteroids-belt2"></div>
         </div>
         <div class="solarSystem" id="solarSystem">
-            <div id="sun">
-                <div id="sun-container"></div>
+            <div id="sun" title="Activate Space Laser">
+                <div id="sun-container" title="Activate Space Laser"></div>
             </div>
-            <div id="pinkPlanet-container">
-                <div id="pinkPlanet" title="Click Me!"></div>
+            <div id="pinkPlanet-container" title="Site Info">
+                <div id="pinkPlanet" title="Site Info"></div>
             </div>
-            <div id="purplePlanet-container">
-                <div id="purplePlanet" title="Click Me!"></div>
+            <div id="purplePlanet-container" title="My Work">
+                <div id="purplePlanet" title="My Work"></div>
             </div>
-            <div id="bluePlanet-container">
-                <div id="bluePlanet" title="Click Me!"></div>
+            <div id="bluePlanet-container" title="About Me">
+                <div id="bluePlanet" title="About Me"></div>
             </div>
         </div>
         <div class="blink-text" id="blink-text">
@@ -37,19 +37,31 @@
         </div>
     </div>
     <!-- Menus -->
-        <div class="menu-container" id="menu-container">
-            <div class="menu" id="menu">
-                <div class="button-container" id="button-container">
-                    <div class="exit-button" id="exit-button" title="exit" alt="exit"></div>
-                    <div class="menu-button" id="menu-button"></div>
+    <div class="menu-container" id="menu-container">
+        <div class="menu" id="menu">
+            <div class="button-container" id="button-container">
+                <div class="exit-button" id="exit-button" title="Exit" alt="Exit"></div>
+                <div class="menu-button" id="menu-button" title="Menu" alt="Menu"></div>
+            </div>
+            <embed type="text/html" src="embeded/about.html" class="about" id="about">
+            <embed type="text/html" src="embeded/info.html" class="info" id="info">
+            <embed type="text/html" src="embeded/work.html" class="work" id="work">
+            <div class="menu-icons" id="menu-icons">
+                <div class="about-me" id="about-me"></div>
+                <div class="my-work" id="my-work"></div>
+                <div class="about-site" id="about-site"></div>
+                <div class="bottom-icons" id="bottom-icons">
+                    <div class="space-laser" id="space-laser"></div>
+                    <div class="socials" id="socials">
+                        <div class="connect" id="connect"></div>
+                        <div class="github" id="github"></div>
+                        <div class="linkedin" id="linkedin"></div>
+                    </div>    
                 </div>
-                <embed type="text/html" src="embeded/about.html" class="about" id="about">
-                <embed type="text/html" src="embeded/info.html" class="info" id="info">
-                <embed type="text/html" src="embeded/work.html" class="work" id="work">
             </div>
         </div>
     </div>
-<!-- Scripts -->
-<script type="text/javascript" src="script.js"></script>
+    <!-- Scripts -->
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
