@@ -14,6 +14,7 @@ const sunContainer = document.getElementById("sun-container");
 const embedAbout = document.getElementById("about");
 const embedInfo = document.getElementById("info");
 const embedWork = document.getElementById("work");
+const menuHeaders = document.getElementById("menu-header");
 
 // Generate Background Asteroid Belt and Stars
 function generateBackground(){
@@ -79,12 +80,35 @@ function generateBackground(){
   generateAsteroids2();
 }
 
+// Clear Header
+function clearHeader() {
+  menuHeaders.innerHTML = "";
+}
+
+// Typewriter Effect on Headings
+function menuHeader() {
+  let i = 0;
+  let txt = "Hi, I'm Katelyn";
+  let speed = 50;
+  console.log('type');
+  function typeWriter() {
+    if (i < txt.length) {
+      menuHeaders.innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+   }
+  }
+  clearHeader();
+  typeWriter();
+}
+
 // Hide Embeded HTMLs
 function hideEmbed() {
     try {
       embedAbout.style.visibility = "hidden";
       embedInfo.style.visibility = "hidden";
       embedWork.style.visibility = "hidden";
+      clearHeader();
     } catch (error) {
       // Catch Error Here
     }
@@ -155,7 +179,8 @@ function closeMenu() {
     openMenu();
     // Hide Embeded
     hideEmbed();
-
+    // Add Header
+    menuHeader();
   }
 
   // Open Menu Container & About Page Upon Button Click
