@@ -88,7 +88,7 @@ function clearHeader() {
 // Typewriter Effect on Headings
 function menuHeader() {
   let i = 0;
-  let txt = "Hi, I'm Katelyn";
+  let txt = "Hi, I'm Katelyn|";
   let speed = 50;
   console.log('type');
   function typeWriter() {
