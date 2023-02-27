@@ -72,10 +72,11 @@ body{
     left: 50%;
     width: 27rem;
     height: 27rem;
+    border-radius: 20px;
     margin-top: -13.5rem;
     margin-left: -13.5rem;
     border: 2px #3f396b62 dashed;
-    border-radius: 100%;
+    border-radius: 100rem;
     -webkit-animation: spin-right 20s linear infinite;
     animation: spin-right 20s linear infinite;
     z-index: 6;
@@ -112,10 +113,11 @@ body{
     left: 50%;
     width: 20rem;
     height: 20rem;
+    border-radius: 20px;
     margin-top: -10rem;
     margin-left: -10rem;
     border: 2px #3f396b62 dashed;
-    border-radius: 100%;
+    border-radius: 100rem;
     -webkit-animation: spin-right 15s linear infinite;
     animation: spin-right 15s linear infinite;
     z-index: 7;
@@ -139,10 +141,11 @@ body{
     left: 50%;
     width: 15rem;
     height: 15rem;
+    border-radius: 20px;
     margin-top: -7.5rem;
     margin-left: -7.5rem;
     border: 2px #3f396b62 dashed;
-    border-radius: 100%;
+    border-radius: 100rem;
     -webkit-animation: spin-right 10s linear infinite;
     animation: spin-right 10s linear infinite;
     z-index: 8;
@@ -159,6 +162,7 @@ body{
 	height: 10rem;
 	box-align: center;
 	margin-left: 3px;
+    border-radius: 100rem;
 	background-color: transparent;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -181,7 +185,6 @@ body{
     cursor: url(embeded/img/pinkCursor.png),auto;
 }
 #sun-container:hover {
-    border-radius: 100rem;
     box-shadow: inset 4px 4px 20px #B7A9FE;
     cursor: url(embeded/img/pinkCursor.png),auto;
 }
@@ -191,14 +194,16 @@ body{
     position: absolute;
     display: flex;
     box-sizing: border-box;
-    width: 60%;
+    overflow: hidden;
+    width: 50%;
     height: 90%;
-    right: 1%;
+    right: 0%;
     top: 5%;
     margin: 10px 10px 10px 10px;
-    background: #211c31;
+    background: #211e31;
     opacity: 0.8;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 4px 2px 2px rgba(209, 209, 195, 0.267);
+    border: 2px solid rgba(44, 44, 44, 0.507);
     border-radius: 20px;
     visibility: hidden;
     z-index: 12;
@@ -213,6 +218,8 @@ body{
     margin: 10px 10px 10px 10px;
     border-radius: 10px;
     background-color: #211e31;
+    border: 2px solid rgba(0, 0, 0, 0.507);
+    box-shadow: inset 4px 2px 4px rgba(0, 0, 0, 0.507);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23b7a9fe' fill-opacity='0.08'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     z-index: 13;
 }
@@ -223,6 +230,7 @@ body{
     padding: .5rem;
     display: flex;
     justify-content: space-between;
+    cursor: url(embeded/img/purpleCursor.png),auto;
     z-index: 15;
 }
 #exit-button {
@@ -269,6 +277,7 @@ h2 {
     white-space: nowrap;
     overflow: hidden;
     z-index: 18;
+    text-shadow: 0px 0px 3px #B7A9FE;
 }
 #about-header{
     position: absolute;
@@ -299,9 +308,9 @@ h2 {
     position: absolute;
     box-sizing: border-box;
     width: 98%;
-    height: 97%;
+    height: 86%;
     right: 0%;
-    top: 0%;
+    top: 4%;
     margin: 10px 10px 10px 10px;
     border-radius: 10px;
 }
@@ -326,56 +335,132 @@ h2 {
     border-radius: 10px;
 }
 /* Menu Icons */
+#menu-icons{
+    position: absolute;
+    box-sizing: border-box;
+    background-size: contain;
+    overflow: hidden;
+    width: 100%;
+    height: 55%;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    z-index: 16;
+
+}
 #about-me {
     position: absolute;
     box-sizing: border-box;
     background-size: contain;
-    width: 40%;
-    height: 20%;
-    transform: translate(80%, 60%);
+    width: 20em;
+    height: 7em;
+    align-self: start;
+    margin-left: 7%;
     background-image: url(embeded/img/aboutMe.png);
+    z-index: 17;
 }
 #my-work {
     position: absolute;
     box-sizing: border-box;
     background-size: contain;
-    width: 40%;
-    height: 20%;
-    transform: translate(80%, 60%);
+    width: 20em;
+    height: 7em;
+    align-self: center;
+    margin-right: 7%;
     background-image: url(embeded/img/myWork.png);
+    z-index: 17;
 }
 #about-site {
     position: absolute;
     box-sizing: border-box;
     background-size: contain;
-    width: 40%;
-    height: 20%;
-    transform: translate(80%, 60%);
+    width: 20em;
+    height: 7em;
+    align-self: end;
+    margin-left: 7%;
     background-image: url(embeded/img/siteInfo.png);
+    z-index: 17;
 }
 #bottom-icons {
     position: absolute;
     box-sizing: border-box;
+    background-size: contain;
+    overflow: hidden;
+    width: 100%;
+    height: 20%;
+    top: 90%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 17;
 }
 #space-laser {
     position: absolute;
     box-sizing: border-box;
-}
-#socials {
-    position: absolute;
-    box-sizing: border-box;
+    width: 9.1em;
+    height: 3.2em;
+    right: 1%;
+    background-image: url(embeded/img/spaceLaser.png);
 }
 #connect {
     position: absolute;
     box-sizing: border-box;
+    width: 7.5em;
+    height: 3.2em;
+    left: 25%;
+    background-image: url(embeded/img/connect.png);
 }
 #github {
     position: absolute;
     box-sizing: border-box;
+    width: 3.2em;
+    height: 3.2em;
+    left: 1%;
+    background-image: url(embeded/img/github.png);
 }
 #linkedin {
     position: absolute;
     box-sizing: border-box;
+    width: 3.2em;
+    height: 3.2em;
+    left: 13%;
+    background-image: url(embeded/img/linkedin.png)
+}
+/* Menu Hover Designs */
+#about-me:hover {
+    border-radius: 100rem;
+    box-shadow: inset 4px 4px 20px #B7A9FE;
+    cursor: url(embeded/img/pinkCursor.png),auto;
+}
+#my-work:hover {
+    border-radius: 100rem;
+    box-shadow: inset 4px 4px 20px #B7A9FE;
+    cursor: url(embeded/img/pinkCursor.png),auto;
+}
+#about-site:hover {
+    border-radius: 100rem;
+    box-shadow: inset 4px 4px 20px #B7A9FE;
+    cursor: url(embeded/img/pinkCursor.png),auto;
+}
+#space-laser:hover {
+    border-radius: 20px;
+    box-shadow: inset 4px 4px 20px #B7A9FE;
+    cursor: url(embeded/img/pinkCursor.png),auto;
+}
+#connect:hover {
+    border-radius: 20px;
+    box-shadow: inset 4px 4px 20px #B7A9FE;
+    cursor: url(embeded/img/pinkCursor.png),auto;
+}
+#github:hover {
+    border-radius: 20px;
+    box-shadow: inset 4px 4px 20px #B7A9FE;
+    cursor: url(embeded/img/pinkCursor.png),auto;
+}
+#linkedin:hover {
+    border-radius: 20px;
+    box-shadow: inset 4px 4px 20px #B7A9FE;
+    cursor: url(embeded/img/pinkCursor.png),auto;
 }
 /* Text Design */
 #blink-text {
@@ -419,7 +504,7 @@ h2 {
 }
 
 /* Media Query: Large Smartphone */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
     body{
         position: fixed;
         width: 100%;
@@ -443,10 +528,46 @@ h2 {
         font-size: 1rem;
     }
     #menu-container{
-        width: 80%;
+        width: 90%;
         height: 80%;
         right: 10px;
         top: 50px;
         margin: 10px 10px 10px 10px;
+    }
+    #menu {
+        width: 94%;
+    }
+    #about-me {
+        width: 15em;
+        height: 5.3em;
+        margin-left: 7%;
+    }
+    #my-work {
+        width: 15em;
+        height: 5.3em;
+        margin-right: 7%;
+    }
+    #about-site {
+        width: 15em;
+        height: 5.3em;
+        margin-left: 7%;
+    }
+    #space-laser {
+        width: 3.2em;
+        height: 3.2em;
+        right: 2%;
+        background-image: url(embeded/img/laserNoText.png);
+    }
+    #connect {
+        width: 3.2em;
+        height: 3.2em;
+        left: 40%;
+        background-image: url(embeded/img/connectNoText.png);
+    }
+    #github {
+        left: 1%;
+    }
+    #linkedin {
+        left: 20%;
     }   
 }

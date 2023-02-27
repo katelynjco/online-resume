@@ -9,12 +9,20 @@ const purplePlanet = document.getElementById("purplePlanet");
 const purplePlanetContainer = document.getElementById("purplePlanet-container");
 const pinkPlanet = document.getElementById("pinkPlanet");
 const pinkPlanetContainer = document.getElementById("pinkPlanet-container");
-const sun = document.getElementById("sun");
 const sunContainer = document.getElementById("sun-container");
 const embedAbout = document.getElementById("about");
 const embedInfo = document.getElementById("info");
 const embedWork = document.getElementById("work");
 const menuHeaders = document.getElementById("menu-header");
+const menuIcons = document.getElementById("menu-icons");
+const aboutIcon = document.getElementById("about-me");
+const workIcon = document.getElementById("my-work");
+const siteIcon = document.getElementById("about-site");
+const spaceLaser = document.getElementById("space-laser");
+const connect = document.getElementById("connect");
+const github = document.getElementById("github");
+const linkedin = document.getElementById("linkedin");
+
 
 // Generate Background Asteroid Belt and Stars
 function generateBackground(){
@@ -91,15 +99,99 @@ function menuHeader() {
   let txt = "Hi, I'm Katelyn|";
   let speed = 50;
   console.log('type');
-  function typeWriter() {
-    if (i < txt.length) {
+  try {
+    function typeWriter() {
+    if (i < txt.length 
+      && menuContainer 
+      && menuContainer.style.visibility === "visible" 
+      && embedAbout.style.visibility === "hidden" 
+      && embedInfo.style.visibility === "hidden" 
+      && embedWork.style.visibility === "hidden") {
       menuHeaders.innerHTML += txt.charAt(i);
       i++;
       setTimeout(typeWriter, speed);
-   }
+      }
+    }
+    clearHeader();
+    typeWriter();
+  }catch (error) {
+  // Catch Error Here
   }
-  clearHeader();
-  typeWriter();
+}
+
+function aboutHeader() {
+  let i = 0;
+  let txt = "About Me|";
+  let speed = 50;
+  console.log('type');
+  try {
+    function typeWriter() {
+    if (i < txt.length 
+      && menuContainer 
+      && menuContainer.style.visibility === "visible" 
+      && menuIcons.style.visibility === "hidden" 
+      && embedInfo.style.visibility === "hidden" 
+      && embedWork.style.visibility === "hidden") {
+      menuHeaders.innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+      }
+    }
+    clearHeader();
+    typeWriter();
+  }catch (error) {
+  // Catch Error Here
+  }
+}
+
+function infoHeader() {
+  let i = 0;
+  let txt = "Site Info|";
+  let speed = 50;
+  console.log('type');
+  try {
+    function typeWriter() {
+    if (i < txt.length 
+      && menuContainer 
+      && menuContainer.style.visibility === "visible" 
+      && menuIcons.style.visibility === "hidden" 
+      && embedAbout.style.visibility === "hidden" 
+      && embedWork.style.visibility === "hidden") {
+      menuHeaders.innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+      }
+    }
+    clearHeader();
+    typeWriter();
+  }catch (error) {
+  // Catch Error Here
+  }
+}
+
+function workHeader() {
+  let i = 0;
+  let txt = "My Work|";
+  let speed = 50;
+  console.log('type');
+  try {
+    function typeWriter() {
+    if (i < txt.length 
+      && menuContainer 
+      && menuContainer.style.visibility === "visible" 
+      && menuIcons.style.visibility === "hidden" 
+      && embedAbout.style.visibility === "hidden" 
+      && embedInfo.style.visibility === "hidden") {
+      menuHeaders.innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+      }
+    }
+    clearHeader();
+    typeWriter();
+  }catch (error) {
+  // Catch Error Here
+  }
 }
 
 // Hide Embeded HTMLs
@@ -109,9 +201,28 @@ function hideEmbed() {
       embedInfo.style.visibility = "hidden";
       embedWork.style.visibility = "hidden";
       clearHeader();
+      hideMenuIcons();
     } catch (error) {
       // Catch Error Here
     }
+}
+
+// Hide Menu Buttons
+function hideMenuIcons() {
+  try {
+    menuIcons.style.visibility = "hidden";
+  } catch (error) {
+    // Catch Error Here
+  }
+}
+
+// Show Menu Buttons
+function showMenuIcons() {
+  try {
+    menuIcons.style.visibility = "visible";
+  } catch (error) {
+    // Catch Error Here
+  }
 }
 
 // Open About Page Upon Menu Open
@@ -148,6 +259,7 @@ function closeMenu() {
       // Hide Menu
       try {
         hideEmbed();
+        hideMenuIcons()
         menuContainer.style.visibility = "hidden";
         blinkText.style.visibility = "visible";
         container.style.width = "100%";
@@ -158,60 +270,89 @@ function closeMenu() {
     }
   }
   
-  // Open Menu Container Upon Button Click
-  function openMenu() {
+// Open Menu Container Upon Button Click
+function openMenu() {
     if (!(menuContainer && menuContainer.style.visibility === "visible")) {
       // Show Menu
       try {
         menuContainer.style.visibility = "visible";
         blinkText.style.visibility = "hidden";
         container.style.width = "0%";
-        solarSystem.style.left = "20%";
+        solarSystem.style.left = "25%";
+        showMenuIcons();
       } catch (error) {
         // Catch Error Here
       }
     }
-  }
+}
 
-  // Open Menu Container & Menu Page Upon Button Click
-  function openMenuPage() {
+// Open Menu Container & Menu Page Upon Button Click
+ function openMenuPage() {
     // Open Menu Container
     openMenu();
     // Hide Embeded
     hideEmbed();
+    // Show Menu
+    showMenuIcons();
     // Add Header
     menuHeader();
-  }
+}
 
-  // Open Menu Container & About Page Upon Button Click
-  function openAbout() {
+// Open Menu Container & About Page Upon Button Click
+function openAbout() {
     // Open Menu Container
     openMenu();
     // Hide other Embeded
     hideEmbed();
     // Open About HTML
     openEmbedAbout();
-  }
+    // Add Header
+    aboutHeader();
+}
 
-  // Open Menu Container & Work Page Upon Button Click
-  function openWork() {
+// Open Menu Container & Work Page Upon Button Click
+function openWork() {
     // Open Menu Container
     openMenu();
     // Hide other Embeded
     hideEmbed();
     // Open Work HTML
     openEmbedWork();
-  }
+    // Add Header
+    workHeader();
+}
 
-  // Open Menu Container & Info Page Upon Button Click
-  function openSite() {
+// Open Menu Container & Info Page Upon Button Click
+function openSite() {
    // Open Menu Container
     openMenu();
     // Hide other Embeded
     hideEmbed();
     // Open Work HTML
     openEmbedInfo();
-  }
+    // Add Header
+    infoHeader();
+}
+
+// Space Laser
+function spaceLaserActivate() {
+  closeMenu();
+  alert('pew');
+}
+
+// Open Social Medias
+function openGithub() {
+  window.open("https://github.com/katelynjco", '_blank');
+}
+
+function openLinkedin() {
+  window.open("https://www.linkedin.com/in/katelyn-j-collins/", '_blank');
+}
+
+function openEmail() {
+  window.location.href = "mailto:user@example.com?subject=Portfolio&body=";
+}
+
   
 // Add Event Listeners After DOM Loads
   function init(){
@@ -226,8 +367,14 @@ function closeMenu() {
     purplePlanetContainer.addEventListener('click', openWork);
     pinkPlanet.addEventListener('click', openSite);
     pinkPlanetContainer.addEventListener('click', openSite);
-    sun.addEventListener('click', openMenuPage);
-    sunContainer.addEventListener('click', openMenuPage);
+    sunContainer.addEventListener('click', spaceLaserActivate);
+    aboutIcon.addEventListener('click', openAbout);
+    workIcon.addEventListener('click', openWork);
+    siteIcon.addEventListener('click', openSite);
+    spaceLaser.addEventListener('click', spaceLaserActivate);
+    connect.addEventListener('click', openEmail);
+    github.addEventListener('click', openGithub);
+    linkedin.addEventListener('click', openLinkedin);
 
     // Exit Menu
     exitButton.addEventListener('click', closeMenu);
