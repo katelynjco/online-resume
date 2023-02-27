@@ -99,10 +99,6 @@ let isHeaderRunning = false;
 let timeoutId;
 
 function animateHeader(txt) {
-  if (isHeaderRunning
-    && menuHeaders.innerHTML === txt.charAt(0)) {
-    return;
-  }
   isHeaderRunning = true;
   let i = 0;
   let speed = 40;

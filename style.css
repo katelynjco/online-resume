@@ -409,7 +409,7 @@ h2 {
     box-sizing: border-box;
     width: 7.5em;
     height: 3.2em;
-    left: 25%;
+    left: 20%;
     background-image: url(embeded/img/connect.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -429,7 +429,7 @@ h2 {
     box-sizing: border-box;
     width: 3.2em;
     height: 3.2em;
-    left: 13%;
+    left: 11%;
     background-image: url(embeded/img/linkedin.png);
     background-repeat: no-repeat;
     background-position: center;
