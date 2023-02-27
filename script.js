@@ -3,6 +3,7 @@ const solarSystem = document.getElementById("solarSystem");
 const container = document.getElementById("container");
 const blinkText = document.getElementById("blink-text");
 const exitButton = document.getElementById("exit-button");
+const menuButton = document.getElementById("menu-button");
 const bluePlanet = document.getElementById("bluePlanet");
 const bluePlanetContainer = document.getElementById("bluePlanet-container");
 const purplePlanet = document.getElementById("purplePlanet");
@@ -94,104 +95,88 @@ function clearHeader() {
 }
 
 // Typewriter Effect on Headings
-function menuHeader() {
+let isHeaderRunning = false;
+let timeoutId;
+
+function animateHeader(txt) {
+  if (isHeaderRunning
+    && menuHeaders.innerHTML === txt.charAt(0)) {
+    return;
+  }
+  isHeaderRunning = true;
   let i = 0;
-  let txt = "Hi, I'm Katelyn|";
-  let speed = 50;
-  console.log('type');
-  try {
-    function typeWriter() {
-    if (i < txt.length 
-      && menuContainer 
-      && menuContainer.style.visibility === "visible" 
-      && embedAbout.style.visibility === "hidden" 
-      && embedInfo.style.visibility === "hidden" 
-      && embedWork.style.visibility === "hidden") {
+  let speed = 40;
+
+  function typeWriter() {
+    if (i < txt.length) {
       menuHeaders.innerHTML += txt.charAt(i);
       i++;
-      setTimeout(typeWriter, speed);
-      }
+      timeoutId = setTimeout(typeWriter, speed);
+    } else {
+      isHeaderRunning = false;
     }
-    clearHeader();
-    typeWriter();
-  }catch (error) {
-  // Catch Error Here
+  }
+
+  clearHeader();
+  typeWriter();
+  return timeoutId;  
+}
+
+function menuHeader() {
+  if (menuContainer 
+    && menuContainer.style.visibility === "visible" 
+    && (!embedAbout || embedAbout.style.visibility === "hidden") 
+    && (!embedInfo || embedInfo.style.visibility === "hidden") 
+    && (!embedWork || embedWork.style.visibility === "hidden")) {
+      if (isHeaderRunning === true) {
+        clearTimeout(timeoutId);
+        clearHeader();
+      }
+      animateHeader("Hi, I'm Katelyn|");
+      console.log('header');
   }
 }
 
 function aboutHeader() {
-  let i = 0;
-  let txt = "About Me|";
-  let speed = 50;
-  console.log('type');
-  try {
-    function typeWriter() {
-    if (i < txt.length 
-      && menuContainer 
-      && menuContainer.style.visibility === "visible" 
-      && menuIcons.style.visibility === "hidden" 
-      && embedInfo.style.visibility === "hidden" 
-      && embedWork.style.visibility === "hidden") {
-      menuHeaders.innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
+  if (menuContainer 
+    && menuContainer.style.visibility === "visible" 
+    && (!menuIcons || menuIcons.style.visibility === "hidden") 
+    && (!embedInfo || embedInfo.style.visibility === "hidden") 
+    && (!embedWork || embedWork.style.visibility === "hidden")) {
+      if (isHeaderRunning === true) {
+        clearTimeout(timeoutId);
+        clearHeader();
       }
-    }
-    clearHeader();
-    typeWriter();
-  }catch (error) {
-  // Catch Error Here
+      animateHeader("About Me|");
   }
 }
 
 function infoHeader() {
-  let i = 0;
-  let txt = "Site Info|";
-  let speed = 50;
-  console.log('type');
-  try {
-    function typeWriter() {
-    if (i < txt.length 
-      && menuContainer 
-      && menuContainer.style.visibility === "visible" 
-      && menuIcons.style.visibility === "hidden" 
-      && embedAbout.style.visibility === "hidden" 
-      && embedWork.style.visibility === "hidden") {
-      menuHeaders.innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
+  if (menuContainer 
+    && menuContainer.style.visibility === "visible" 
+    && (!menuIcons || menuIcons.style.visibility === "hidden") 
+    && (!embedAbout || embedAbout.style.visibility === "hidden") 
+    && (!embedWork || embedWork.style.visibility === "hidden")) {
+      if (isHeaderRunning === true) {
+        clearTimeout(timeoutId);
+        clearHeader();
       }
+      animateHeader("Site Info|");
     }
-    clearHeader();
-    typeWriter();
-  }catch (error) {
-  // Catch Error Here
-  }
 }
 
 function workHeader() {
-  let i = 0;
-  let txt = "My Work|";
-  let speed = 50;
-  console.log('type');
-  try {
-    function typeWriter() {
-    if (i < txt.length 
-      && menuContainer 
-      && menuContainer.style.visibility === "visible" 
-      && menuIcons.style.visibility === "hidden" 
-      && embedAbout.style.visibility === "hidden" 
-      && embedInfo.style.visibility === "hidden") {
-      menuHeaders.innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
+  if (menuContainer 
+    && menuContainer.style.visibility === "visible" 
+    && (!menuIcons || menuIcons.style.visibility === "hidden") 
+    && (!embedAbout || embedAbout.style.visibility === "hidden") 
+    && (!embedInfo || embedInfo.style.visibility === "hidden")) {
+      if (isHeaderRunning === true) {
+        clearTimeout(timeoutId);
+        clearHeader();
       }
+      animateHeader("My Work|");
     }
-    clearHeader();
-    typeWriter();
-  }catch (error) {
-  // Catch Error Here
-  }
 }
 
 // Hide Embeded HTMLs
@@ -361,11 +346,9 @@ function openEmail() {
 
     // Open Menus
     container.addEventListener('click', openMenuPage);
-    bluePlanet.addEventListener('click', openAbout);
+    menuButton.addEventListener('click', openMenuPage);
     bluePlanetContainer.addEventListener('click', openAbout);
-    purplePlanet.addEventListener('click', openWork);
     purplePlanetContainer.addEventListener('click', openWork);
-    pinkPlanet.addEventListener('click', openSite);
     pinkPlanetContainer.addEventListener('click', openSite);
     sunContainer.addEventListener('click', spaceLaserActivate);
     aboutIcon.addEventListener('click', openAbout);
