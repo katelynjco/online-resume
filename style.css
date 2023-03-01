@@ -278,6 +278,7 @@ h2 {
     overflow: hidden;
     z-index: 18;
     text-shadow: 0px 0px 3px #B7A9FE;
+    letter-spacing: 0.11em;
 }
 #about-header{
     position: absolute;
@@ -308,30 +309,33 @@ h2 {
     position: absolute;
     box-sizing: border-box;
     width: 98%;
-    height: 86%;
+    height: 81%;
     right: 0%;
-    top: 5%;
-    margin: 10px 10px 10px 10px;
+    top: 8%;
+    margin: 1% 1% 1% 1%;
+    border: 2px solid #9FF1FD;
     border-radius: 10px;
 }
 #info {
     position: absolute;
     box-sizing: border-box;
     width: 98%;
-    height: 86%;
+    height: 81%;
     right: 0%;
-    top: 5%;
-    margin: 10px 10px 10px 10px;
+    top: 8%;
+    margin: 1% 1% 1% 1%;
+    border: 2px solid #FE9DF6;
     border-radius: 10px;
 }
 #work {
     position: absolute;
     box-sizing: border-box;
-    width: 96%;
-    height: 86%;
+    width: 98%;
+    height: 81%;
     right: 0%;
-    top: 5%;
+    top: 8%;
     margin: 1% 1% 1% 1%;
+    border: 2px solid #B7A9FE;
     border-radius: 10px;
 }
 /* Menu Icons */
@@ -399,7 +403,7 @@ h2 {
     box-sizing: border-box;
     width: 8.2em;
     height: 3.2em;
-    right: 1%;
+    right: 2%;
     background-image: url(embeded/img/spaceLaser.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -417,9 +421,9 @@ h2 {
 #github {
     position: absolute;
     box-sizing: border-box;
-    width: 3.2em;
-    height: 3.2em;
-    left: 1%;
+    width: 3.4em;
+    height: 3.4em;
+    left: 2%;
     background-image: url(embeded/img/github.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -429,7 +433,7 @@ h2 {
     box-sizing: border-box;
     width: 3.2em;
     height: 3.2em;
-    left: 11%;
+    left: 11.5%;
     background-image: url(embeded/img/linkedin.png);
     background-repeat: no-repeat;
     background-position: center;

@@ -1,7 +1,7 @@
 html {
     box-sizing: content-box;
-    width: 100%;
-    height: 100%;
+    width: 98.5vw;
+    height: 100vh;
     z-index: 0;
 }
 
@@ -9,5 +9,145 @@ body {
     background-color: rgba(0, 0, 0, 0.0);
     cursor: url(img/purpleCursor.png),auto;
     font-family: 'Space Grotesk', sans-serif;
-    color: #B7A9FE;
+}
+
+/* ABOUT PAGE */
+#about {
+    color: #9FF1FD;
+    height: 100%;
+    width: 100%;
+}
+
+#bio-header {
+    box-sizing: border-box;
+    width: 100%;
+    height: 6.5rem;
+
+}
+
+#avatar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    background-color: #9FF1FD;
+    margin: 2% 5%;
+    float: left;
+    box-shadow: 0px 0px 4px #9FF1FD;
+}
+
+#name {
+    Width: 60%;
+    height: 100%;
+    top: 4%;
+    left: 8rem;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1%;
+    gap: 1%;
+    position: absolute;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 4px #9FF1FD;
+}
+
+#byline {
+    Width: 60%;
+    height: 100%;
+    top: 10%;
+    left: 8rem;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1%;
+    gap: 1%;
+    position: absolute;
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: light;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    text-shadow: 0px 0px 4px #9FF1FD;
+}
+
+#summary {
+    background-color: #6ED5E3;
+    Margin: 1% 0%;
+    height: auto;
+    letter-spacing: 0.11em;
+    padding: 1rem 1rem;
+    box-shadow: 5px 10px 10px rgba(25, 41, 44, 0.60);
+}
+
+#tagline {
+    color: #36747D;
+    text-align: center;
+    letter-spacing: 0.11em;
+    Margin: 2% 8%;
+    text-shadow: 0px 0px 1.5px #36747D;
+}
+
+#about-content {
+    font-style: normal;
+    line-height: 1.5rem;
+    letter-spacing: 0.13em;
+    text-indent: 10px;
+    Margin: 2% 2% 2% 3%;
+    text-shadow: 0px 0px 1.5px #6ED5E3;
+}
+
+/* WORK PAGE */
+
+/* INFO PAGE */
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #211E31;
+    
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #B7A9FE; 
+    border-radius: 3px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #907EE8;
+}
+
+  /* Media Query: Large Smartphone */
+@media screen and (max-width: 800px) {
+    html {
+        width: 95.5vw;
+    }
+    #about {
+        font-size: smaller;
+    }
+    #bio-header {
+        box-sizing: border-box;
+        height: 5rem;
+    }
+    #avatar {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+        background-color: #D9D9D9;
+        margin: 3% 3%;
+        float: left;
+    }
+    #name {
+        top: 4%;
+        left: 5rem;
+        font-size: 0.8rem;
+    }
+    
+    #byline {
+        top: 8%;
+        left: 5.5rem;
+        font-size: 0.8rem;
+    }
 }
