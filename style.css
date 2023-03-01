@@ -311,7 +311,7 @@ h2 {
     width: 98%;
     height: 81%;
     right: 0%;
-    top: 8%;
+    top: 7.5%;
     margin: 1% 1% 1% 1%;
     border: 2px solid #9FF1FD;
     border-radius: 10px;
@@ -322,7 +322,7 @@ h2 {
     width: 98%;
     height: 81%;
     right: 0%;
-    top: 8%;
+    top: 7.5%;
     margin: 1% 1% 1% 1%;
     border: 2px solid #FE9DF6;
     border-radius: 10px;
@@ -333,7 +333,7 @@ h2 {
     width: 98%;
     height: 81%;
     right: 0%;
-    top: 8%;
+    top: 7.5%;
     margin: 1% 1% 1% 1%;
     border: 2px solid #B7A9FE;
     border-radius: 10px;
@@ -577,9 +577,9 @@ h2 {
         background-image: url(embeded/img/connectNoText.png);
     }
     #github {
-        left: 1%;
+        left: 2%;
     }
     #linkedin {
-        left: 20%;
+        left: 21%;
     }   
 }
