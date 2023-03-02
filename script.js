@@ -331,7 +331,7 @@ function openLinkedin() {
 }
 
 function openEmail() {
-  window.location.href = "mailto:user@example.com?subject=Portfolio&body=";
+  window.location.href = "mailto:collins@katelynj.co?subject=Portfolio&body=";
 }
 
   
