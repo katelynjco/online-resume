@@ -401,9 +401,9 @@ h2 {
 #space-laser {
     position: absolute;
     box-sizing: border-box;
-    width: 8.2em;
+    width: 8.5em;
     height: 3.2em;
-    right: 2%;
+    right: 10px;
     background-image: url(embeded/img/spaceLaser.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -413,7 +413,7 @@ h2 {
     box-sizing: border-box;
     width: 7.5em;
     height: 3.2em;
-    left: 20%;
+    left: 130px;
     background-image: url(embeded/img/connect.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -423,7 +423,7 @@ h2 {
     box-sizing: border-box;
     width: 3.4em;
     height: 3.4em;
-    left: 2%;
+    left: 10px;
     background-image: url(embeded/img/github.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -433,7 +433,7 @@ h2 {
     box-sizing: border-box;
     width: 3.2em;
     height: 3.2em;
-    left: 11.5%;
+    left: 75px;
     background-image: url(embeded/img/linkedin.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -567,19 +567,19 @@ h2 {
     #space-laser {
         width: 3.2em;
         height: 3.2em;
-        right: 2%;
+        right: 10px;
         background-image: url(embeded/img/laserNoText.png);
     }
     #connect {
         width: 3.2em;
         height: 3.2em;
-        left: 40%;
+        left: 140px;
         background-image: url(embeded/img/connectNoText.png);
     }
     #github {
-        left: 2%;
+        left: 10px;
     }
     #linkedin {
-        left: 21%;
+        left: 75px;
     }   
 }

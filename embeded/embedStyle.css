@@ -98,6 +98,80 @@ body {
 
 /* WORK PAGE */
 
+#work {
+    color: #B7A9FE;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    cursor: url(img/pinkCursor.png), auto;
+}
+
+#work-container {
+    margin: 10px 5%;
+    display: grid;
+}
+#project-container {
+    box-sizing: content-box;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    margin: 5px;
+    background-color: #B7A9FE;
+    opacity: 0.75;
+    border: #B7A9FE 2px solid;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px #B7A9FE
+}
+#img {
+    display: flex;
+    justify-content: space-evenly;
+    contain: strict;
+    object-fit: scale-down;
+    background-color: #B7A9FE;
+    border-radius: 10px;
+    height: 100%;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+#img > a > img {
+    height: 100%;
+    width: 200px;
+    object-fit: contain;
+}
+
+#project-info {
+    display: grid;
+    color: #52468D;
+    align-content: space-evenly;
+    justify-content: start;
+    justify-items: start;
+    height: 90%;
+    width: fit-content;
+    margin: 0px 0px 0px 10px;
+}
+#project-title {
+    font-size: medium;
+    text-decoration: underline;
+
+}
+#project-description{
+    font-size: smaller;
+    font-weight: 100;
+    font-style: italic;
+    overflow: hidden;
+}
+#code-link{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    z-index: 100;
+    background-color: #6D5CBF;
+    justify-self: start;
+    align-self: end;
+}
+
 /* INFO PAGE */
 
 #info {
@@ -180,5 +254,16 @@ body {
         top: 8%;
         left: 5.5rem;
         font-size: 0.8rem;
+    }
+    
+    #project-container {
+        width: 100%;
+        display: flex;
+    }
+    #img {
+        width: 100px;
+    }
+    #project-description{
+        font-size: xx-small;
     }
 }
