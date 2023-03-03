@@ -152,7 +152,7 @@ body {
 }
 #project-title {
     font-size: medium;
-    text-decoration: underline;
+    text-transform: uppercase;
 
 }
 #project-description{

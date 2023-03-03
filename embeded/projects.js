@@ -71,9 +71,6 @@ function displayProjects() {
       const projectDescription = projectContainer.querySelector(".project-description");
       projectDescription.textContent = project.description;
   
-      const projectLink = projectContainer.querySelector(".code-link a");
-      projectLink.href = project.code;
-  
       // Append the cloned project container element to the work container
       workContainer.appendChild(projectContainer);
     });
