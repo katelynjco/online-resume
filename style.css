@@ -494,28 +494,25 @@ h2 {
 #follow-cursor{
     position:absolute;
     visibility: hidden;
-    z-index: 50;
+    z-index: 5;
 }
 
 #blue-follow{
     position:absolute;
-    animation: shake 4s linear infinite;
+    animation: shake 5s linear infinite;
     visibility: hidden;
-    z-index: 50;
 }
 
 #purple-follow{
     position:absolute;
-    animation: shake 5s linear infinite;
+    animation: shake 9s linear infinite;
     visibility: hidden;
-    z-index: 50;
 }
 
 #pink-follow{
     position:absolute;
-    animation: shake 6s linear infinite;
+    animation: shake 7s linear infinite;
     visibility: hidden;
-    z-index: 50;
 }
 
 
@@ -556,17 +553,17 @@ h2 {
     }
   }
   @keyframes shake {
-        0% { transform: translate(1px, 1px) rotate(0deg); }
-        10% { transform: translate(-1px, -2px) rotate(-1deg); }
-        20% { transform: translate(-3px, 0px) rotate(1deg); }
-        30% { transform: translate(3px, 2px) rotate(0deg); }
-        40% { transform: translate(1px, -1px) rotate(1deg); }
-        50% { transform: translate(-1px, 2px) rotate(-1deg); }
-        60% { transform: translate(-3px, 1px) rotate(0deg); }
-        70% { transform: translate(3px, 1px) rotate(-1deg); }
-        80% { transform: translate(-1px, -1px) rotate(1deg); }
-        90% { transform: translate(1px, 2px) rotate(0deg); }
-        100% { transform: translate(1px, -2px) rotate(-1deg); }
+        0% { transform: translate(2px, 2px) rotate(1deg); }
+        10% { transform: translate(-2px, -2px) rotate(-5deg); }
+        20% { transform: translate(-3px, 2px) rotate(3deg); }
+        30% { transform: translate(2px, -2px) rotate(1deg); }
+        40% { transform: translate(-3px, -1px) rotate(-2deg); }
+        50% { transform: translate(-2px, -2px) rotate(4deg); }
+        60% { transform: translate(2px, 2px) rotate(-1deg); }
+        70% { transform: translate(3px, 1px) rotate(5deg); }
+        80% { transform: translate(-2px, -2px) rotate(1deg); }
+        90% { transform: translate(3px, -2px) rotate(-1deg); }
+        100% { transform: translate(2px, 1px) rotate(5deg); }
   }
 
 /* ---------- Media Query ---------- */

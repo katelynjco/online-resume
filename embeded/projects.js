@@ -51,30 +51,31 @@ const projectArray = [
 ];
 
 
-// Create Elements for Links & Photos, Add to Dom
 function displayProjects() {
     const workContainer = document.getElementById("work-container");
     projectArray.forEach((project) => {
       // Clone the project container element
       const projectContainer = document.getElementById("project-container").cloneNode(true);
-  
+    
       // Set the title, description, and URL for the project
       const previewImage = projectContainer.querySelector("#preview");
       previewImage.src = project.image;
-
-      const sitelink = projectContainer.querySelector("#img a");
+  
+      const sitelink = projectContainer.querySelector(".img a");
       sitelink.href = project.url;
-
-      const projectTitle = projectContainer.querySelector(".project-title");
+  
+      const projectTitle = projectContainer.querySelector("#project-title");
       projectTitle.textContent = project.title;
   
       const projectDescription = projectContainer.querySelector(".project-description");
       projectDescription.textContent = project.description;
   
+      const projectCode = projectContainer.querySelector("#project-info a");
+      projectCode.href = project.code;
+  
       // Append the cloned project container element to the work container
       workContainer.appendChild(projectContainer);
     });
   }
-
-
-displayProjects();
+  
+  document.addEventListener('DOMContentLoaded', displayProjects, false);

@@ -150,6 +150,12 @@ body {
     width: fit-content;
     margin: 0px 0px 0px 10px;
 }
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
 #project-title {
     font-size: medium;
     text-transform: uppercase;
@@ -161,17 +167,6 @@ body {
     font-style: italic;
     overflow: hidden;
 }
-#code-link{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    z-index: 100;
-    background-color: #6D5CBF;
-    justify-self: start;
-    align-self: end;
-}
-
 /* INFO PAGE */
 
 #info {
