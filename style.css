@@ -499,19 +499,19 @@ h2 {
 
 #blue-follow{
     position:absolute;
-    animation: shake 5s linear infinite;
+    animation: shake 15s linear infinite;
     visibility: hidden;
 }
 
 #purple-follow{
     position:absolute;
-    animation: shake 9s linear infinite;
+    animation: shake 21s linear infinite;
     visibility: hidden;
 }
 
 #pink-follow{
     position:absolute;
-    animation: shake 7s linear infinite;
+    animation: shake 18s linear infinite;
     visibility: hidden;
 }
 
