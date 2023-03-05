@@ -89,6 +89,90 @@ function generateBackground(){
   generateAsteroids2();
 }
 
+// Cursor Companions Follow
+function cursorFollow() {
+
+  // find cursor
+  function mouseX(evt) {if (!evt) evt = window.event; if (evt.pageX) return evt.pageX; else if (evt.clientX)return evt.clientX + (document.documentElement.scrollLeft ?  document.documentElement.scrollLeft : document.body.scrollLeft); else return 0;}
+  function mouseY(evt) {if (!evt) evt = window.event; if (evt.pageY) return evt.pageY; else if (evt.clientY)return evt.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop); else return 0;}
+  
+  function addCompanion(){
+    function navi(evt) {
+        // div that is to follow the mouse (must be position:absolute)
+        let divName = 'blue-follow'; 
+        // X offset from mouse position
+        let offX = 25;          
+        // Y offset from mouse position
+        let offY = 30; 
+        var obj = document.getElementById(divName).style;
+        obj.left = (parseInt(mouseX(evt))+offX) + 'px';
+        obj.top = (parseInt(mouseY(evt))+offY) + 'px'; 
+      }
+
+    function ufo(evt) {
+      // div that is to follow the mouse (must be position:absolute)
+      let divName = 'purple-follow'; 
+      // X offset from mouse position
+      let offX = 20;          
+      // Y offset from mouse position
+      let offY = 100; 
+      var obj = document.getElementById(divName).style;
+      obj.left = (parseInt(mouseX(evt))+offX) + 'px';
+      obj.top = (parseInt(mouseY(evt))+offY) + 'px'; 
+    }
+
+    function pinky(evt) {
+      // div that is to follow the mouse (must be position:absolute)
+      let divName = 'pink-follow'; 
+      // X offset from mouse position
+      let offX = 100;          
+       // Y offset from mouse position
+      let offY = 70; 
+      var obj = document.getElementById(divName).style;
+        obj.left = (parseInt(mouseX(evt))+offX) + 'px';
+        obj.top = (parseInt(mouseY(evt))+offY) + 'px'; 
+      }
+      navi();
+      ufo();
+      pinky();   
+    }
+  document.onmousemove = addCompanion;
+}
+
+// Easter Egg - If planet is clicked 5 times, a companion appears
+let blueClick = 0;
+let purpleClick = 0;
+let pinkClick = 0;
+
+function blueAppear(){
+  blueClick = blueClick + 1;
+  console.log(blueClick);
+
+  if (blueClick >= 5){
+    document.getElementById("blue-follow").style.visibility = "visible";
+  }
+}
+
+function purpleAppear(){
+  purpleClick = purpleClick + 1;
+  console.log(purpleClick);
+
+  if (purpleClick >= 5){
+    document.getElementById("purple-follow").style.visibility = "visible";
+  }
+}
+
+
+function pinkAppear(){
+  pinkClick = pinkClick + 1;
+  console.log(pinkClick);
+
+  if (pinkClick >= 5){
+    document.getElementById("pink-follow").style.visibility = "visible";
+  }
+}
+
+
 // Clear Header
 function clearHeader() {
   menuHeaders.innerHTML = "";
@@ -334,7 +418,8 @@ function openEmail() {
   window.location.href = "mailto:developer@katelynj.co?subject=Portfolio&body=";
 }
 
-  
+
+
 // Add Event Listeners After DOM Loads
   function init(){
     // Generate Background
@@ -346,6 +431,9 @@ function openEmail() {
     bluePlanetContainer.addEventListener('click', openAbout);
     purplePlanetContainer.addEventListener('click', openWork);
     pinkPlanetContainer.addEventListener('click', openSite);
+    bluePlanet.addEventListener('click', blueAppear);
+    purplePlanet.addEventListener('click', purpleAppear);
+    pinkPlanet.addEventListener('click', pinkAppear);
     sunContainer.addEventListener('click', spaceLaserActivate);
     aboutIcon.addEventListener('click', openAbout);
     workIcon.addEventListener('click', openWork);
@@ -354,9 +442,12 @@ function openEmail() {
     connect.addEventListener('click', openEmail);
     github.addEventListener('click', openGithub);
     linkedin.addEventListener('click', openLinkedin);
-
+    
     // Exit Menu
     exitButton.addEventListener('click', closeMenu);
+
+    // Have Cursor Companions follow cursor on load
+    cursorFollow();
   };
 
 // On Load
