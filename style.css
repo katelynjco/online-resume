@@ -499,6 +499,30 @@ h2 {
     z-index: 3;
 }
 
+/* Space Laser Canvas */
+
+#drawing-board{
+    position:absolute;
+    z-index: 100;
+    visibility: hidden;
+    cursor: url(embeded/img/laserCursor.png),auto;
+}
+
+.no-laser{
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    margin-left: 4%;
+    margin-top: 2%;
+    visibility: hidden;
+    background-image: url(embeded/img/noLaser.png);
+    animation: blinker 3s linear infinite;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 150;
+}
+
 /* Cursor Companions */
 #follow-cursor{
     position:absolute;

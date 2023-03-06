@@ -1,4 +1,7 @@
 const menuContainer = document.getElementById("menu-container");
+const starsOrbit = document.getElementById('stars');
+const asteroidBelt = document.getElementById('asteroids-belt');
+const asteroidBelt2 = document.getElementById('asteroids-belt2');
 const solarSystem = document.getElementById("solarSystem");
 const container = document.getElementById("container");
 const blinkText = document.getElementById("blink-text");
@@ -23,6 +26,8 @@ const spaceLaser = document.getElementById("space-laser");
 const connect = document.getElementById("connect");
 const github = document.getElementById("github");
 const linkedin = document.getElementById("linkedin");
+const canvas = document.getElementById('drawing-board');
+const noLaser = document.getElementById("no-laser");
 
 
 // Generate Background Asteroid Belt and Stars
@@ -395,11 +400,73 @@ function openSite() {
     infoHeader();
 }
 
+// Toggle Page Animations
+function toggleOrbit() {
+  const animations = [bluePlanetContainer, purplePlanetContainer, pinkPlanetContainer, starsOrbit, asteroidBelt, asteroidBelt2];
+  animations.forEach(animation => {
+    const running = animation.style.animationPlayState || 'running';
+    animation.style.animationPlayState = running === 'running' ? 'paused' : 'running';
+  });
+}
+
 // Space Laser
+function spaceLaserDeactivate() {
+  canvas.style.visibility = "hidden";
+  noLaser.style.visibility = "hidden";
+  blinkText.style.visibility = "visible";
+  toggleOrbit();
+
+}
+
 function spaceLaserActivate() {
   closeMenu();
-  alert('pew');
+  // Pause animations
+  toggleOrbit();
+  blinkText.style.visibility = "hidden";
+  // Add Canvas
+  noLaser.style.visibility = "visible";
+  canvas.style.visibility = "visible";
+  const ctx = canvas.getContext('2d');
+  const canvasOffsetX = canvas.offsetLeft;
+  const canvasOffsetY = canvas.offsetTop;
+  canvas.width = window.innerWidth - canvasOffsetX;
+  canvas.height = window.innerHeight - canvasOffsetY;
+
+  // Drawing Controls
+  let isPainting = false;
+  let lineWidth = 15;
+  let startX;
+  let startY;
+
+  canvas.addEventListener('mousedown', (e) => {
+    isPainting = true;
+    startX = e.clientX;
+    startY = e.clientY;
+  });
+
+  canvas.addEventListener('mouseup', e => {
+    isPainting = false;
+    ctx.stroke();
+    ctx.beginPath();
+  });
+
+  const draw = (e) => {
+    if(!isPainting) {
+        return;
+    }
+
+    ctx.lineWidth = lineWidth;
+    ctx.lineCap = 'round';
+
+    ctx.lineTo(e.clientX - canvasOffsetX, e.clientY);
+    ctx.strokeStyle = '#060214';
+    ctx.stroke();
+  }
+  alert('Press and hold the right mouse button to draw with the space laser');
+  canvas.addEventListener('mousemove', draw);
+  noLaser.addEventListener('click', spaceLaserDeactivate);
 }
+
 
 // Open Social Medias
 function openGithub() {
