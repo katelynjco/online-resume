@@ -140,9 +140,9 @@ function cursorFollow() {
 }
 
 // Easter Egg - If planet is clicked 5 times, a companion appears
-let blueClick = 0;
-let purpleClick = 0;
-let pinkClick = 0;
+let blueClick = 1;
+let purpleClick = 1;
+let pinkClick = 1;
 function blueAppear(){
   blueClick = blueClick + 1;
   console.log(blueClick);
