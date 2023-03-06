@@ -242,6 +242,7 @@ body{
     background-color: #b7a9fe;
     background-image: url(embeded/img/exit.png);
     cursor: url(embeded/img/pinkCursor.png),auto;
+    background-size: cover;
     order: 2;
     z-index: 17;
 }
@@ -253,6 +254,7 @@ body{
     background-color: #b7a9fe;
     background-image: url(embeded/img/menu.png);
     cursor: url(embeded/img/pinkCursor.png),auto;
+    background-size: cover;
     z-index: 17;
 }
 #header-container {
@@ -363,6 +365,7 @@ h2 {
     align-self: start;
     margin-left: 7%;
     background-image: url(embeded/img/aboutMe.png);
+    background-size: cover;
     z-index: 17;
 }
 #my-work {
@@ -374,6 +377,7 @@ h2 {
     align-self: center;
     margin-right: 7%;
     background-image: url(embeded/img/myWork.png);
+    background-size: cover;
     z-index: 17;
 }
 #about-site {
@@ -385,6 +389,7 @@ h2 {
     align-self: end;
     margin-left: 7%;
     background-image: url(embeded/img/siteInfo.png);
+    background-size: cover;
     z-index: 17;
 }
 #bottom-icons {
@@ -408,16 +413,18 @@ h2 {
     background-image: url(embeded/img/spaceLaser.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 #connect {
     position: absolute;
     box-sizing: border-box;
     width: 7.5em;
     height: 3.2em;
-    left: 130px;
+    left: 140px;
     background-image: url(embeded/img/connect.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 #github {
     position: absolute;
@@ -428,16 +435,18 @@ h2 {
     background-image: url(embeded/img/github.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 #linkedin {
     position: absolute;
     box-sizing: border-box;
     width: 3.2em;
     height: 3.2em;
-    left: 75px;
+    left: 77px;
     background-image: url(embeded/img/linkedin.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 /* Menu Hover Designs */
 #about-me:hover {
