@@ -143,7 +143,6 @@ function cursorFollow() {
 let blueClick = 0;
 let purpleClick = 0;
 let pinkClick = 0;
-
 function blueAppear(){
   blueClick = blueClick + 1;
   console.log(blueClick);
@@ -152,7 +151,6 @@ function blueAppear(){
     document.getElementById("blue-follow").style.visibility = "visible";
   }
 }
-
 function purpleAppear(){
   purpleClick = purpleClick + 1;
   console.log(purpleClick);
@@ -161,8 +159,6 @@ function purpleAppear(){
     document.getElementById("purple-follow").style.visibility = "visible";
   }
 }
-
-
 function pinkAppear(){
   pinkClick = pinkClick + 1;
   console.log(pinkClick);
