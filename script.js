@@ -434,7 +434,7 @@ function spaceLaserActivate() {
 
   // Drawing Controls
   let isPainting = false;
-  let lineWidth = 15;
+  let lineWidth = 10;
   let startX;
   let startY;
 
@@ -462,7 +462,7 @@ function spaceLaserActivate() {
     ctx.strokeStyle = '#060214';
     ctx.stroke();
   }
-  alert('Press and hold the right mouse button to draw with the space laser. Click the button the right to stop.');
+  alert('Press and hold the right mouse button to draw with the space laser. Click the button on the right to stop.');
   canvas.addEventListener('mousemove', draw);
   noLaser.addEventListener('click', spaceLaserDeactivate);
 }
