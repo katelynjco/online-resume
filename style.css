@@ -247,6 +247,12 @@ body{
     order: 2;
     z-index: 17;
 }
+#exit-button:hover {
+    filter: hue-rotate(-40deg);
+}
+#exit-button:active {
+    filter: hue-rotate(40deg);
+}
 #menu-button {
     width: 2rem;
     height: 2rem;
@@ -257,6 +263,12 @@ body{
     cursor: url(embeded/img/pinkCursor.png),auto;
     background-size: cover;
     z-index: 17;
+}
+#menu-button:hover {
+    filter: hue-rotate(-40deg);
+}
+#menu-button:active {
+    filter: hue-rotate(40deg);
 }
 #header-container {
     box-sizing: border-box;
