@@ -248,10 +248,10 @@ body{
     z-index: 17;
 }
 #exit-button:hover {
-    filter: hue-rotate(-40deg);
+    filter: brightness(1.2);
 }
 #exit-button:active {
-    filter: hue-rotate(40deg);
+    filter: brightness(0.4);
 }
 #menu-button {
     width: 2rem;
@@ -265,10 +265,10 @@ body{
     z-index: 17;
 }
 #menu-button:hover {
-    filter: hue-rotate(-40deg);
+    filter: brightness(1.2);
 }
 #menu-button:active {
-    filter: hue-rotate(40deg);
+    filter: brightness(0.4);
 }
 #header-container {
     box-sizing: border-box;

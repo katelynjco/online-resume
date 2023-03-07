@@ -43,7 +43,7 @@ const projectArray = [
     },
     {
         "title": "Prank Landing Page",
-        "description": "A site generated completely from HTML, designed for a laugh",
+        "description": "A site generated completely primarily HTML, designed for a laugh",
         "image": "img/projects/tcTuggers.png",
         "url": "https://katelynjco.github.io/tc-tuggers/",
         "code": "https://github.com/katelynjco/tc-tuggers"
