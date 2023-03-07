@@ -122,6 +122,11 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 4px #B7A9FE
 }
+
+#project-container:hover {
+    box-shadow: inset 0px 0px 20px #52468D;
+}
+
 #img {
     display: flex;
     justify-content: space-evenly;
@@ -132,6 +137,10 @@ body {
     height: 100%;
     width: 200px;
     flex-shrink: 0;
+}
+
+#img:hover {
+    filter: drop-shadow(0px 0px 20px #B7A9FE) invert(30%);
 }
 
 #img > a > img {
@@ -210,7 +219,7 @@ a:active { text-decoration: none; }
     letter-spacing: 0.13em;
     text-indent: 10px;
     Margin: 2% 2% 2% 3%;
-    text-shadow: 0px 0px 1.5px #FE9DF6;
+    text-shadow: 0px 0px 0.0px #FE9DF6;
 }
 
 

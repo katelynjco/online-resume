@@ -144,7 +144,7 @@ function cursorFollow() {
   document.onmousemove = addCompanion;
 }
 
-// Easter Egg - If planet is clicked 5 times, a companion appears
+// Easter Egg - If planet is clicked 4 times, a companion appears
 let blueClick = 1;
 let purpleClick = 1;
 let pinkClick = 1;
@@ -152,7 +152,7 @@ function blueAppear(){
   blueClick = blueClick + 1;
   console.log(blueClick);
 
-  if (blueClick >= 5){
+  if (blueClick >= 4){
     document.getElementById("blue-follow").style.visibility = "visible";
   }
 }
@@ -160,7 +160,7 @@ function purpleAppear(){
   purpleClick = purpleClick + 1;
   console.log(purpleClick);
 
-  if (purpleClick >= 5){
+  if (purpleClick >= 4){
     document.getElementById("purple-follow").style.visibility = "visible";
   }
 }
@@ -168,7 +168,7 @@ function pinkAppear(){
   pinkClick = pinkClick + 1;
   console.log(pinkClick);
 
-  if (pinkClick >= 5){
+  if (pinkClick >= 4){
     document.getElementById("pink-follow").style.visibility = "visible";
   }
 }
@@ -286,6 +286,9 @@ function hideMenuIcons() {
 function showMenuIcons() {
   try {
     menuIcons.style.visibility = "visible";
+    bluePlanet.style.boxShadow = "0px 0px 0px #B7A9FE";
+      purplePlanet.style.boxShadow = "0px 0px 0px #B7A9FE";
+      pinkPlanet.style.boxShadow = "0px 0px 0px #B7A9FE";
   } catch (error) {
     // Catch Error Here
   }
@@ -295,6 +298,9 @@ function showMenuIcons() {
 function openEmbedAbout() {
     try {
       embedAbout.style.visibility = "visible";
+      bluePlanet.style.boxShadow = "0px 0px 30px #B7A9FE";
+      purplePlanet.style.boxShadow = "0px 0px 0px #B7A9FE";
+      pinkPlanet.style.boxShadow = "0px 0px 0px #B7A9FE";
     } catch (error) {
       // Catch Error Here
     }
@@ -304,6 +310,9 @@ function openEmbedAbout() {
 function openEmbedWork() {
     try {
       embedWork.style.visibility = "visible";
+      bluePlanet.style.boxShadow = "0px 0px 0px #B7A9FE";
+      purplePlanet.style.boxShadow = "0px 0px 30px #B7A9FE";
+      pinkPlanet.style.boxShadow = "0px 0px 0px #B7A9FE";
     } catch (error) {
       // Catch Error Here
     }
@@ -314,6 +323,9 @@ function openEmbedInfo() {
     // Show Menu
     try {
       embedInfo.style.visibility = "visible";
+      bluePlanet.style.boxShadow = "0px 0px 0px #B7A9FE";
+      purplePlanet.style.boxShadow = "0px 0px 0px #B7A9FE";
+      pinkPlanet.style.boxShadow = "0px 0px 30px #B7A9FE";
     } catch (error) {
       // Catch Error Here
     }
@@ -330,6 +342,9 @@ function closeMenu() {
         blinkText.style.visibility = "visible";
         container.style.width = "100%";
         solarSystem.style.left = "50%";
+        bluePlanet.style.boxShadow = "0px 0px 0px #B7A9FE";
+        purplePlanet.style.boxShadow = "0px 0px 0px #B7A9FE";
+        pinkPlanet.style.boxShadow = "0px 0px 0px #B7A9FE";
       } catch (error) {
         // Catch Error Here
       }
@@ -462,7 +477,7 @@ function spaceLaserActivate() {
     ctx.strokeStyle = '#060214';
     ctx.stroke();
   }
-  alert('Press and hold the right mouse button to draw with the space laser. Click the button on the right to stop.');
+  alert('Press and hold the right mouse button to draw over objects with the space laser. Click the button on the right to stop.');
   canvas.addEventListener('mousemove', draw);
   noLaser.addEventListener('click', spaceLaserDeactivate);
 }
