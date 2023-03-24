@@ -17,4 +17,4 @@ Allows the webpage to respond to user input and generate dynamic content.
 Randomly generates and assigns the star background.
 Makes each cursor companion visable after clicking on the corresponding planet 4 times.
 Controls the space laser drawing tool.
-Overall, the JavaScript code controls the various elements on the page, such as the menu, planet containers, and text effects. The CSS code provides visual styling to these elements, such as colors, borders, and shadows.Together, these
+Overall, the JavaScript code controls the various elements on the page, such as the menu, planet containers, and text effects. The CSS code provides visual styling to these elements, such as colors, borders, and shadows.
