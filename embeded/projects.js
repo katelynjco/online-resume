@@ -1,5 +1,12 @@
 const projectArray = [
     {
+        "title": "Hazards Along the Way",
+        "description": "A complex text based adventure game built using JavaScript, CSS, and HTML",
+        "image": "img/projects/hazards.png",
+        "url": "https://katelynjco.github.io/hazards/",
+        "code": "https://github.com/katelynjco/hazards"
+    },
+    {
         "title": "Modern Website Sample",
         "description": "A sleek example product that uses JavaScript to switch between a light and a dark theme",
         "image": "img/projects/modernSample.png",
