@@ -1,5 +1,19 @@
 const projectArray = [
     {
+        "title": "Mislay: March of the Miner",
+        "description": "A short platforming game built for a Game Jam in 2 weeks using Unity and C#",
+        "image": "img/projects/mislay.png",
+        "url": "https://katelynjco.itch.io/mislay",
+        "code": "https://github.com/katelynjco/Mislay"
+    },
+    {
+        "title": "SmartBrain-AI",
+        "description": "A face detecting application built using React, Node.js, and SQL",
+        "image": "img/projects/react.png",
+        "url": "https://smart-brain-ai-katelynjco.herokuapp.com/",
+        "code": "https://github.com/katelynjco/smart-brain-api"
+    },
+    {
         "title": "Hazards Along the Way",
         "description": "A complex text based adventure game built using JavaScript, CSS, and HTML",
         "image": "img/projects/hazards.png",
@@ -69,7 +83,7 @@ function displayProjects() {
       previewImage.src = project.image;
   
       const sitelink = projectContainer.querySelector(".img a");
-      sitelink.href = project.url;
+      sitelink.href = project.code;
   
       const projectTitle = projectContainer.querySelector("#project-title");
       projectTitle.textContent = project.title;
@@ -78,7 +92,7 @@ function displayProjects() {
       projectDescription.textContent = project.description;
   
       const projectCode = projectContainer.querySelector("#project-info a");
-      projectCode.href = project.code;
+      projectCode.href = project.url;
   
       // Append the cloned project container element to the work container
       workContainer.appendChild(projectContainer);

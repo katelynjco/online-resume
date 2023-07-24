@@ -507,14 +507,13 @@ h2 {
 #blink-text {
     font-family: 'Space Grotesk', sans-serif;
     color: #3f396b62;
-    opacity: 0.8;
     font-size: 1.5rem;
     font-weight: bold;
     position: fixed;
     bottom: 2%;
     width: 100%;
     text-align: center;
-    animation: blinker 5s linear infinite;
+    animation: blinker 7s linear infinite;
     z-index: 3;
 }
 
@@ -592,7 +591,7 @@ h2 {
 }
 @keyframes blinker {
     50% {
-        opacity: 0;
+        opacity: 0.3;
     }
 }
 @keyframes spin-right {
